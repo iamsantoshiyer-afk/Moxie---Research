@@ -582,9 +582,60 @@
 
   @media (max-width: 860px) {
     .page1, .page2 { grid-template-columns: 1fr; }
-    .p1-left, .p1-right, .p2-left, .p2-right { padding: 40px 32px; }
-    .header { padding: 40px 32px; }
-    .footer { padding: 32px; flex-direction: column; gap: 24px; align-items: flex-start; }
+    .p1-left, .p1-right, .p2-left, .p2-right { padding: 40px 28px; }
+    .header { padding: 36px 28px 32px; }
+    .footer { padding: 28px; flex-direction: column; gap: 20px; align-items: flex-start; }
+
+    .header-body {
+      grid-template-columns: 1fr 120px;
+      grid-template-rows: auto auto;
+      gap: 20px;
+    }
+
+    .header-title {
+      font-size: clamp(32px, 9vw, 52px);
+    }
+
+    .header-sub {
+      font-size: clamp(15px, 4vw, 22px);
+    }
+
+    .header-photo-wrap {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .header-photo {
+      max-width: 120px;
+      height: 150px;
+    }
+
+    .contents-panel {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+
+    .intro-line {
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header { padding: 28px 20px; }
+    .p1-left, .p1-right, .p2-left, .p2-right { padding: 32px 20px; }
+    .footer { padding: 24px 20px; }
+
+    .header-body {
+      grid-template-columns: 1fr 100px;
+    }
+
+    .header-photo {
+      max-width: 100px;
+      height: 125px;
+    }
+
+    .sentiment-cols, .brand-grid, .rtw-grid, .seg-grid,
+    .trend-grid, .window-inner { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -905,15 +956,10 @@
   <div class="footer-left">
     <strong>Santosh Iyer</strong>
     EiR Applicant · Guidepoint Equity Analyst<br>
-    s84094260@gmail.com · +91-9558357375<br>
+    <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8db909c98919c9a9e98e8cfc5c9c1c486cbc7c5">[email&#160;protected]</a> · +91-9558357375<br>
     <a href="https://www.linkedin.com/in/santosh-iyer-spjimr" target="_blank" style="color:var(--cyan);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;text-decoration:none;">linkedin.com/in/santosh-iyer-spjimr →</a><br>
     <span style="color:rgba(255,255,255,0.18);font-size:9px;margin-top:4px;display:block;">Built before the interview.</span>
   </div>
   <div class="footer-right">
     <a class="appendix-link" href="moxie_appendix.html">Appendix: 4 hours of Claude Pro credits, well spent →</a>
-    <div class="footer-note">Consumer sentiment · Competitive benchmarking · Ingredient trend deep dives</div>
-  </div>
-</footer>
-
-</body>
-</html>
+    <div class="footer-not
